@@ -1,0 +1,54 @@
+Source code written with Piklab
+Delay routines generated with pikloops
+Recommended gputils for assembling
+Recommended gpsim for simulation
+
+
+Files needed for the UCC Unit:
+.
+|-- common
+|   |-- sac.h
+|   `-- temps.inc
+|-- ucc
+|   |-- control-panel.inc
+|   |-- led-pos.inc
+|   `-- ucc.asm
+`-- wireless
+    |-- cyspi.inc
+    |-- cywmsr.inc
+    `-- cywusb6935.inc
+
+
+Files needed for the VACIO 16F88 PIC:
+.
+|-- common
+|   |-- sac.h
+|   `-- temps.inc
+|-- logic
+|   `-- control-vacio.asm
+`-- wireless
+    |-- cyspi.inc
+    |-- cywmsr.inc
+    `-- cywusb6935.inc
+
+
+Files needed for the VACIO 16F628A PIC:
+.
+|-- common
+|   `-- temps.inc
+`-- motor-control
+    |-- control-servo.asm
+    `-- movs.inc
+
+Files needed for the Debug Board:
+.
+|-- common
+|   |-- sac.h
+|   `-- temps.inc
+|-- debuger
+|   `-- test-recvr.asm
+`-- wireless
+    |-- cyspi.inc
+    |-- cywmsr.inc
+    `-- cywusb6935.inc
+

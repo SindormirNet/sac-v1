@@ -1,0 +1,70 @@
+; Versión 0.4 (18/02/09)
+; - Mejora de tratamiento de ceda el paso, el robot sale con turbo de los CP
+; - Lectura de enconders redundante y mantenimiento del sector leido
+; - Sistema de parada cuando se detecta linea horizontal larga
+; - Tratamiento de cedas el paso
+; - En el CP, antes de arrancar, verificar si ha sido CP o si final de carrera
+; - Permite salir cuando se encuentre en el sector de la salida indicada
+; - Configurada velocidad 3 por defecto
+; - Implementada posibilidad de indicar salida.
+
+; Version 0.5 (22/02/09)
+; - Arreglada estética del codigo y añadidos bloques y comentarios
+; - Reestructuración de código
+; - Eliminada función redundante
+; - Mejora de la función Lee_pos y reducción de complegidad del código
+; - En caso de salida 7 no respeta los CPs, ni lee el sector en el que está
+; - Con salida 7 configurada es capaz de leer las desviaciones obligatorias
+; - Reconocimiento de fin de pista optimizado
+; - Cuando arranca ya no muestra como sector reconocido al programado
+
+; Version 0.6 (24/02/09)
+; - Uso del 7 segmentos para representar la configuración de salita a tomar
+; - Comprar reguladores de tension de 3,3V para placa wifi
+; - Una vez leido el CP de la salida seleccionada se olvida del sector
+; - Arreglado sensor D2 de robot 1. Fallaba el cable
+; - Arreglado control de velocidad incorrecto en uC de servos
+; - Cambiada disposición de los botones para que los dos robots sean iguales
+
+; Version 0.7 (11/03/09)
+; - Unificar código de speed-control con com1 para garantizar que speed-control
+; funciona con las variables y las configuraciones de setup de com1
+
+; Version 0.8 (18/03/09)
+; - Añadida posibilidad de cambiar mediante botones el ID del robot
+; - Implementación de sistema wifi de transmisión de posición
+; - No hacer CP si no estamos en el sector programado
+; - No lee más sectores si tiene la salida activada
+; - Sistema wifi de petición de incorporación a pista 
+; - Solucionados varios problemas con el CP
+; - Solucionados varios problemas con la representación en la UCC
+; - En modo freestyle tarda más tiempo desde que lo levantas hata que se para. Ok
+; - Cambiado código de encriptación
+; - Ajustados parámetros de tolerancia a errores de transmisión
+; - Mejorados tiempos de respuesta en el CP
+
+; Version 0.9 (23/03/09)
+; - Cambios en el código en lo referente al ID de cada robot
+; - Mejora de los tiempos de transmisión y sistema de evasión de colisiones 
+; - Solución del problema que impedía mostar los sectores 0 y 2 en la UCC
+; - Hacer que detecte vacio parado en cualquier sector y lo de de baja del mapa
+; - Solucionado problema de página con la tabla de posiciones
+; - Creada nueva función de escucha no bloqueante
+; - Sistema wifi de RTV implementado
+; - Sistema para poder controlar la salida de cada vacio remotamente
+; - Añadir lógica para control del zumbador
+; - test-recvr mejorado con recibe no bloqueante y señal de enviar a casa
+
+; Version 1.0 (24/03/09)
+; - Limpieza de código
+; - Descartada opción de guardar ID de cada vacio en eeprom. Da problemas extraños
+; - Intentar que el pitido de la RTV no impida hacer más cosas durante 1 segundo
+; - Después de n peticiones de incorporación a pista el sistema ya no falla
+
+; POR HACER PARA version 2.0
+; - Algoritmo para garantizar que de un sector solo se puede pasar al siguiente
+; - Hacer que cada vez que lea un sector lo muestre por un instante en el 7S
+; - Ajustar tiempos de pwm de servos. El vacio 1 va mal con velocidad 1
+; - Cambio de sistema de localización por RFID
+
+
